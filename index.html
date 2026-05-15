@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,33 +16,40 @@
             --border-color: #334155;
             --shadow-color: rgba(0, 0, 0, 0.18);
         }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
             min-height: 100vh;
             line-height: 1.7;
         }
+
         a {
             color: var(--accent-color);
             text-decoration: none;
         }
+
         a:hover,
         .btn:hover {
             opacity: 0.92;
         }
+
         .page-shell {
             width: min(1180px, calc(100% - 32px));
             margin: 0 auto;
         }
+
         header {
             display: flex;
             flex-wrap: wrap;
@@ -50,23 +58,27 @@
             gap: 18px;
             padding: 32px 0 12px;
         }
+
         .brand-title {
             font-size: 2rem;
             color: var(--accent-color);
             display: inline-block;
             margin-bottom: 10px;
         }
+
         .brand-subtitle {
             color: var(--muted-text);
             max-width: 620px;
             font-size: 0.98rem;
         }
+
         .top-nav {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             align-items: center;
         }
+
         .top-nav a {
             padding: 10px 16px;
             border-radius: 999px;
@@ -75,6 +87,7 @@
             font-size: 0.94rem;
             font-weight: 600;
         }
+
         .hero {
             background-color: var(--surface);
             border: 1px solid var(--border-color);
@@ -83,31 +96,37 @@
             box-shadow: 0 24px 50px var(--shadow-color);
             margin-bottom: 42px;
         }
+
         .hero h1 {
             font-size: 2.8rem;
             line-height: 1.05;
             margin-bottom: 18px;
         }
+
         .hero p {
             max-width: 760px;
             color: #dbeafe;
             font-size: 1.05rem;
         }
+
         .section-title {
             font-size: 1.9rem;
             color: var(--accent-color);
             margin-bottom: 18px;
         }
+
         .section-subtitle {
             color: var(--muted-text);
             margin-bottom: 28px;
             max-width: 760px;
         }
+
         .grid {
             display: grid;
             gap: 24px;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
+
         .card {
             background-color: var(--surface-strong);
             border: 1px solid var(--border-color);
@@ -118,11 +137,13 @@
             gap: 20px;
             box-shadow: 0 18px 35px var(--shadow-color);
         }
+
         .card-header {
             display: flex;
             gap: 16px;
             align-items: center;
         }
+
         .card-img {
             width: 84px;
             height: 84px;
@@ -131,21 +152,25 @@
             background-color: #0f172a;
             flex-shrink: 0;
         }
+
         .card-header h3 {
             color: var(--accent-color);
             font-size: 1.25rem;
             margin: 0;
             line-height: 1.25;
         }
+
         .card p {
             color: #dbeafe;
             font-size: 0.96rem;
         }
+
         .actions {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
         }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -159,14 +184,17 @@
             border: none;
             cursor: pointer;
         }
+
         .btn-secondary {
             background-color: transparent;
             color: var(--accent-color);
             border: 1px solid var(--accent-color);
         }
+
         .btn-secondary:hover {
             background-color: rgba(56, 189, 248, 0.12);
         }
+
         .privacy-links-list {
             display: flex;
             flex-wrap: wrap;
@@ -174,6 +202,7 @@
             margin-top: 10px;
             align-items: center;
         }
+
         .privacy-links-list a {
             padding: 10px 16px;
             border-radius: 999px;
@@ -182,6 +211,7 @@
             color: var(--accent-color);
             font-weight: 600;
         }
+
         .contact-card {
             background-color: var(--surface-strong);
             border: 1px solid var(--border-color);
@@ -190,9 +220,11 @@
             display: grid;
             gap: 18px;
         }
+
         .contact-card p {
             color: #dbeafe;
         }
+
         footer {
             padding: 32px 0 48px;
             text-align: center;
@@ -200,33 +232,53 @@
             border-top: 1px solid var(--border-color);
             margin-top: 20px;
         }
+
         footer a {
             display: inline-block;
             color: var(--accent-color);
             margin-top: 10px;
         }
+
         @media (max-width: 900px) {
             .hero {
                 padding: 28px 22px;
             }
+
             header {
                 align-items: stretch;
             }
         }
+
         @media (max-width: 640px) {
-            body { min-height: auto; }
-            .brand-title { font-size: 1.75rem; }
-            .hero h1 { font-size: 2.15rem; }
-            .top-nav { justify-content: center; }
-            .card { padding: 22px; }
+            body {
+                min-height: auto;
+            }
+
+            .brand-title {
+                font-size: 1.75rem;
+            }
+
+            .hero h1 {
+                font-size: 2.15rem;
+            }
+
+            .top-nav {
+                justify-content: center;
+            }
+
+            .card {
+                padding: 22px;
+            }
         }
     </style>
 </head>
+
 <body>
     <header class="page-shell">
         <div>
             <a class="brand-title" href="/">Rafael de Souza Costa</a>
-            <p class="brand-subtitle">Desenvolvedor independente de aplicativos mobile e software com foco em soluções intuitivas, estabilidade técnica e experiência profissional.</p>
+            <p class="brand-subtitle">Desenvolvedor independente de aplicativos mobile e software com foco em soluções
+                intuitivas, estabilidade técnica e experiência profissional.</p>
         </div>
         <nav class="top-nav" aria-label="Navegação principal">
             <a href="#apps">Apps</a>
@@ -238,7 +290,8 @@
     <main class="page-shell">
         <section class="hero">
             <h1>Portfólio de aplicativos Android</h1>
-            <p>Conheça projetos desenvolvidos para empresas, profissionais e projetos acadêmicos, com foco em usabilidade, produtividade e privacidade dos usuários.</p>
+            <p>Conheça projetos desenvolvidos para empresas, profissionais e projetos acadêmicos, com foco em
+                usabilidade, produtividade e privacidade dos usuários.</p>
         </section>
 
         <section id="apps">
@@ -246,45 +299,63 @@
             <div class="grid">
                 <article class="card">
                     <div class="card-header">
-                        <img src="https://play-lh.googleusercontent.com/N0YZs8lWzzauVCKCtFbh8aCWRiurC3Y5KT-azzESPQl_qPpVVwueYdDSylKEv3pjghNh7tud7PQLPP2DbYQV6RE=w240-h480-rw" alt="Auto Center Santo Expedito" class="card-img">
+                        <img src="https://play-lh.googleusercontent.com/N0YZs8lWzzauVCKCtFbh8aCWRiurC3Y5KT-azzESPQl_qPpVVwueYdDSylKEv3pjghNh7tud7PQLPP2DbYQV6RE=w240-h480-rw"
+                            alt="Auto Center Santo Expedito" class="card-img">
                         <h3>Auto Center Santo Expedito</h3>
                     </div>
-                    <p>Aplicativo corporativo para gerenciamento de estoque e fluxo de trabalho interno, projetado para uso restrito de equipes treinadas.</p>
+                    <p>Aplicativo corporativo para gerenciamento de estoque e fluxo de trabalho interno, projetado para
+                        uso restrito de equipes treinadas.</p>
                     <div class="actions">
-                        <a class="btn" href="https://play.google.com/store/apps/details?id=estoque_santo_expedito.developer.rafael.projeto_estoque_santo_expedito" target="_blank">Ver na Google Play</a>
-                        <a class="btn btn-secondary" href="/auto-center-santo-expedito-privacidade.html">Política de Privacidade</a>
+                        <a class="btn"
+                            href="https://play.google.com/store/apps/details?id=estoque_santo_expedito.developer.rafael.projeto_estoque_santo_expedito"
+                            target="_blank">Ver na Google Play</a>
+                        <a class="btn btn-secondary" href="/auto-center-santo-expedito-privacidade.html">Política de
+                            Privacidade</a>
                     </div>
                 </article>
                 <article class="card">
                     <div class="card-header">
-                        <img src="https://play-lh.googleusercontent.com/njUcdI7kwjn27x-v13sIiv9vmwHEVj-DlAWdvz8mj4LjKe-xv8cd9ealrjnIwRLZGU7aNmgr8Z3Hgqsbo8mPb8I=w240-h480-rw" alt="Foto Registro" class="card-img">
+                        <img src="https://play-lh.googleusercontent.com/njUcdI7kwjn27x-v13sIiv9vmwHEVj-DlAWdvz8mj4LjKe-xv8cd9ealrjnIwRLZGU7aNmgr8Z3Hgqsbo8mPb8I=w240-h480-rw"
+                            alt="Foto Registro" class="card-img">
                         <h3>Foto Registro</h3>
                     </div>
-                    <p>Transforme fotos em documentos profissionais para vistorias, inspeções e relatórios técnicos com processamento local e controle total do usuário.</p>
+                    <p>Transforme fotos em documentos profissionais para vistorias, inspeções e relatórios técnicos com
+                        processamento local e controle total do usuário.</p>
                     <div class="actions">
-                        <a class="btn" href="https://play.google.com/store/apps/details?id=foto_registro.developer.rafael_souza_costa" target="_blank">Ver na Google Play</a>
+                        <a class="btn"
+                            href="https://play.google.com/store/apps/details?id=foto_registro.developer.rafael_souza_costa"
+                            target="_blank">Ver na Google Play</a>
                         <a class="btn btn-secondary" href="/foto-registro-privacidade.html">Política de Privacidade</a>
                     </div>
                 </article>
                 <article class="card">
                     <div class="card-header">
-                        <img src="https://play-lh.googleusercontent.com/A6q9xXbGP4lr8JoMVPJR-uCW9JAgzJL90Q5vEJjgIWO2IXCmHQpY-tx8Hmcap34vmCc=w240-h480-rw" alt="Saúde do Interior" class="card-img">
+                        <img src="https://play-lh.googleusercontent.com/A6q9xXbGP4lr8JoMVPJR-uCW9JAgzJL90Q5vEJjgIWO2IXCmHQpY-tx8Hmcap34vmCc=w240-h480-rw"
+                            alt="Saúde do Interior" class="card-img">
                         <h3>Saúde do Interior</h3>
                     </div>
-                    <p>Solução desenvolvida para projeto acadêmico com foco na divulgação de informações de saúde e apoio a comunidades rurais.</p>
+                    <p>Solução desenvolvida para projeto acadêmico com foco na divulgação de informações de saúde e
+                        apoio a comunidades rurais.</p>
                     <div class="actions">
-                        <a class="btn" href="https://play.google.com/store/apps/details?id=saudedointerior.developer.rafaelsouza.projeto_saude_do_interior" target="_blank">Ver na Google Play</a>
-                        <a class="btn btn-secondary" href="/saude-do-interior-privacidade.html">Política de Privacidade</a>
+                        <a class="btn"
+                            href="https://play.google.com/store/apps/details?id=saudedointerior.developer.rafaelsouza.projeto_saude_do_interior"
+                            target="_blank">Ver na Google Play</a>
+                        <a class="btn btn-secondary" href="/saude-do-interior-privacidade.html">Política de
+                            Privacidade</a>
                     </div>
                 </article>
                 <article class="card">
                     <div class="card-header">
-                        <img src="https://play-lh.googleusercontent.com/i5B019W0HW7Fq0q1qCu8jLJuroGiN9k-DGKW8UCPytgf1vpzONQICiaBl__H_M9Iiw=w240-h480-rw" alt="Radio Music" class="card-img">
+                        <img src="https://play-lh.googleusercontent.com/i5B019W0HW7Fq0q1qCu8jLJuroGiN9k-DGKW8UCPytgf1vpzONQICiaBl__H_M9Iiw=w240-h480-rw"
+                            alt="Radio Music" class="card-img">
                         <h3>Radio Music</h3>
                     </div>
-                    <p>Aplicativo de streaming de áudio com interface leve e foco em transmissão confiável e experiência do usuário.</p>
+                    <p>Aplicativo de streaming de áudio com interface leve e foco em transmissão confiável e experiência
+                        do usuário.</p>
                     <div class="actions">
-                        <a class="btn" href="https://play.google.com/store/apps/details?id=webradio.developer.rafaelsouza.projeto_web_radio" target="_blank">Ver na Google Play</a>
+                        <a class="btn"
+                            href="https://play.google.com/store/apps/details?id=webradio.developer.rafaelsouza.projeto_web_radio"
+                            target="_blank">Ver na Google Play</a>
                         <a class="btn btn-secondary" href="/radio-music-privacidade.html">Política de Privacidade</a>
                     </div>
                 </article>
@@ -293,7 +364,8 @@
 
         <section id="politica-privacidade">
             <h2 class="section-title">Políticas de privacidade</h2>
-            <p class="section-subtitle">Cada aplicativo possui uma política dedicada para esclarecer como os dados são tratados e quais permissões são usadas.</p>
+            <p class="section-subtitle">Cada aplicativo possui uma política dedicada para esclarecer como os dados são
+                tratados e quais permissões são usadas.</p>
             <div class="card">
                 <div class="privacy-links-list">
                     <a href="/auto-center-santo-expedito-privacidade.html">Auto Center Santo Expedito</a>
@@ -307,8 +379,10 @@
         <section id="contato">
             <h2 class="section-title">Suporte & Contato</h2>
             <div class="contact-card">
-                <p>Se quiser conversar sobre desenvolvimento de aplicativos, enviar uma proposta de parceria ou apresentar uma demanda técnica, entre em contato.</p>
-                <p><strong>E-mail:</strong> <a href="mailto:rafaeldesouzacosta.dev@gmail.com">rafaeldesouzacosta.dev@gmail.com</a></p>
+                <p>Se quiser conversar sobre desenvolvimento de aplicativos, enviar uma proposta de parceria ou
+                    apresentar uma demanda técnica, entre em contato.</p>
+                <p><strong>E-mail:</strong> <a
+                        href="mailto:rafaeldesouzacosta.dev@gmail.com">rafaeldesouzacosta.dev@gmail.com</a></p>
                 <p><strong>WhatsApp:</strong> +55 64 99266-1371</p>
                 <a class="btn" href="mailto:rafaeldesouzacosta.dev@gmail.com">Enviar e-mail</a>
             </div>
@@ -317,7 +391,7 @@
 
     <footer class="page-shell">
         <p>&copy; 2026 Rafael de Souza Costa. Todos os direitos reservados.</p>
-        <p><a href="/app-ads.txt" target="_blank">developer app-ads.txt</a></p>
     </footer>
 </body>
+
 </html>
