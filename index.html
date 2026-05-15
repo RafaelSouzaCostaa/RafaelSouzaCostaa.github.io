@@ -64,6 +64,8 @@
             border-radius: 8px;
             border: 1px solid #334155;
             transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
         }
         .card:hover {
             transform: translateY(-5px);
@@ -71,6 +73,18 @@
         .card h3 {
             color: var(--accent-color);
             margin-bottom: 10px;
+        }
+        /* Nova classe profissional para ajustar o tamanho da foto miniatura */
+        .card-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            background-color: #0f172a;
+        }
+        .card p {
+            flex-grow: 1;
         }
         .btn {
             display: inline-block;
@@ -81,6 +95,7 @@
             text-decoration: none;
             font-weight: bold;
             margin-top: 15px;
+            text-align: center;
         }
         .btn:hover {
             opacity: 0.9;
@@ -115,29 +130,43 @@
         <section id="apps">
             <h2>Meus Aplicativos</h2>
             <div class="grid">
+                
                 <!-- Card do Aplicativo 1 -->
                 <div class="card">
+                    <!-- Cole a URL da foto dentro das aspas do src abaixo -->
+                    <img src="https://play-lh.googleusercontent.com/N0YZs8lWzzauVCKCtFbh8aCWRiurC3Y5KT-azzESPQl_qPpVVwueYdDSylKEv3pjghNh7tud7PQLPP2DbYQV6RE=w240-h480-rw" alt="Auto Center Santo Expedito" class="card-img">
                     <h3>Auto Center Santo Expedito</h3>
                     <p>Aplicação privada, voltada a funcionários da Auto Center Santo Expedito, os mesmos tem treinamento para usar o app.</p>
                     <a href="https://play.google.com/store/apps/details?id=estoque_santo_expedito.developer.rafael.projeto_estoque_santo_expedito" class="btn" target="_blank">Ver na Google Play</a>
                 </div>
+
                 <!-- Card do Aplicativo 2 -->
                 <div class="card">
+                    <!-- Cole a URL da foto dentro das aspas do src abaixo -->
+                    <img src="https://play-lh.googleusercontent.com/njUcdI7kwjn27x-v13sIiv9vmwHEVj-DlAWdvz8mj4LjKe-xv8cd9ealrjnIwRLZGU7aNmgr8Z3Hgqsbo8mPb8I=w240-h480-rw" alt="Foto Registro" class="card-img">
                     <h3>Foto Registro</h3>
-                    <p>Transforme suas fotos em documentos profissionais com o Foto Registo.
-O Foto Registo é a ferramenta ideal para profissionais que precisam documentar trabalhos, vistorias, inspeções...</p>
+                    <p>Transforme suas fotos em documentos profissionais com o Foto Registo. O Foto Registo é a ferramenta ideal para profissionais que precisam documentar trabalhos, vistorias, inspeções...</p>
                     <a href="https://play.google.com/store/apps/details?id=foto_registro.developer.rafael_souza_costa" class="btn" target="_blank">Ver na Google Play</a>
                 </div>
-                 <div class="card">
+
+                <!-- Card do Aplicativo 3 -->
+                <div class="card">
+                    <!-- Cole a URL da foto dentro das aspas do src abaixo -->
+                    <img src="https://play-lh.googleusercontent.com/A6q9xXbGP4lr8JoMVPJR-uCW9JAgzJL90Q5vEJjgIWO2IXCmHQpY-tx8Hmcap34vmCc=w240-h480-rw" alt="Saúde do Interior" class="card-img">
                     <h3>Saúde do Interior</h3>
                     <p>App desenvolvido para fins de TCC</p>
                     <a href="https://play.google.com/store/apps/details?id=saudedointerior.developer.rafaelsouza.projeto_saude_do_interior" class="btn" target="_blank">Ver na Google Play</a>
                 </div>
-                 <div class="card">
+
+                <!-- Card do Aplicativo 4 -->
+                <div class="card">
+                    <!-- Cole a URL da foto dentro das aspas do src abaixo -->
+                    <img src="https://play-lh.googleusercontent.com/i5B019W0HW7Fq0q1qCu8jLJuroGiN9k-DGKW8UCPytgf1vpzONQICiaBl__H_M9Iiw=w240-h480-rw" alt="Radio Music" class="card-img">
                     <h3>Radio Music</h3>
                     <p>Bem-vindo ao nosso aplicativo Rádio Music! Estamos entusiasmados em oferecer uma ampla variedade de musicas.</p>
                     <a href="https://play.google.com/store/apps/details?id=webradio.developer.rafaelsouza.projeto_web_radio" class="btn" target="_blank">Ver na Google Play</a>
                 </div>
+
             </div>
         </section>
 
@@ -146,7 +175,6 @@ O Foto Registo é a ferramenta ideal para profissionais que precisam documentar 
             <div class="card">
                 <h3>Compromisso com a Privacidade</h3>
                 <p>Nossos aplicativos são desenvolvidos respeitando a privacidade e a segurança dos dados dos usuários. Coletamos apenas as informações estritamente necessárias para o funcionamento dos serviços e exibição de publicidade via Google AdMob.</p>
-                <!-- Você pode criar uma página separada se quiser, ou deixar um texto resumido aqui -->
                 <p style="margin-top: 15px; color: var(--muted-text);">Para ler os termos completos de uso e privacidade de cada aplicativo, acesse o link direto na página de download da respectiva loja.</p>
             </div>
         </section>
@@ -162,7 +190,6 @@ O Foto Registo é a ferramenta ideal para profissionais que precisam documentar 
 
     <footer>
         <p>&copy; 2026 Rafael de Souza Costa. Todos os direitos reservados.</p>
-       
     </footer>
 
 </body>
