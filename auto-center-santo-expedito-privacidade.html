@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,33 +16,40 @@
             --border-color: #334155;
             --shadow-color: rgba(0, 0, 0, 0.18);
         }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
             min-height: 100vh;
             line-height: 1.75;
         }
+
         a {
             color: var(--accent-color);
             text-decoration: none;
         }
+
         a:hover,
         .btn:hover {
             opacity: 0.92;
         }
+
         .page-shell {
             width: min(1180px, calc(100% - 32px));
             margin: 0 auto;
         }
+
         header {
             display: flex;
             flex-wrap: wrap;
@@ -50,23 +58,27 @@
             gap: 18px;
             padding: 32px 0 12px;
         }
+
         .brand-title {
             font-size: 2rem;
             color: var(--accent-color);
             display: inline-block;
             margin-bottom: 10px;
         }
+
         .brand-subtitle {
             color: var(--muted-text);
             max-width: 620px;
             font-size: 0.98rem;
         }
+
         .top-nav {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             align-items: center;
         }
+
         .top-nav a {
             padding: 10px 16px;
             border-radius: 999px;
@@ -75,6 +87,7 @@
             font-size: 0.94rem;
             font-weight: 600;
         }
+
         .hero {
             background-color: var(--surface);
             border: 1px solid var(--border-color);
@@ -83,52 +96,63 @@
             box-shadow: 0 24px 50px var(--shadow-color);
             margin-bottom: 42px;
         }
+
         .hero h1 {
             font-size: 2.6rem;
             line-height: 1.05;
             margin-bottom: 16px;
         }
+
         .hero p {
             color: #dbeafe;
             font-size: 1.05rem;
             max-width: 760px;
         }
+
         .section-title {
             font-size: 1.9rem;
             color: var(--accent-color);
             margin-bottom: 18px;
         }
+
         .section-subtitle {
             color: var(--muted-text);
             margin-bottom: 28px;
         }
+
         .page-main {
             display: grid;
             grid-template-columns: minmax(0, 1fr);
             gap: 32px;
         }
+
         .content-body {
             display: grid;
             gap: 28px;
         }
+
         .content-body h2 {
             font-size: 1.4rem;
             color: var(--accent-color);
             margin-bottom: 12px;
         }
+
         .content-body p,
         .content-body li {
             color: #dbeafe;
         }
+
         .content-body ul {
             padding-left: 20px;
             list-style: disc;
             margin-top: 12px;
         }
+
         .aside {
             display: grid;
             gap: 24px;
         }
+
         .card,
         .highlight-card {
             background-color: var(--surface-strong);
@@ -137,20 +161,24 @@
             padding: 24px;
             box-shadow: 0 18px 35px var(--shadow-color);
         }
+
         .highlight-card {
             border-left: 4px solid var(--accent-color);
         }
+
         .card h3,
         .highlight-card h3 {
             margin-bottom: 14px;
             color: var(--accent-color);
             font-size: 1.13rem;
         }
+
         .card p,
         .highlight-card p,
         .content-body p {
             margin-bottom: 12px;
         }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -164,14 +192,17 @@
             border: none;
             cursor: pointer;
         }
+
         .btn-secondary {
             background-color: transparent;
             border: 1px solid var(--accent-color);
             color: var(--accent-color);
         }
+
         .btn-secondary:hover {
             background-color: rgba(56, 189, 248, 0.12);
         }
+
         footer {
             padding: 32px 0 48px;
             text-align: center;
@@ -179,23 +210,69 @@
             border-top: 1px solid var(--border-color);
             margin-top: 20px;
         }
+
         @media (min-width: 940px) {
-            .page-main { grid-template-columns: 2fr 1fr; }
+            .page-main {
+                grid-template-columns: 2fr 1fr;
+            }
         }
+
         @media (max-width: 900px) {
-            .hero { padding: 28px 22px; }
+            .hero {
+                padding: 28px 22px;
+            }
+
+            .top-nav {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .top-nav a {
+                min-width: 130px;
+            }
+
+            .card,
+            .highlight-card {
+                padding: 20px;
+            }
+
+            .btn,
+            .btn-secondary {
+                width: 100%;
+            }
         }
+
         @media (max-width: 640px) {
-            .top-nav { justify-content: center; }
-            .hero h1 { font-size: 2.2rem; }
+            .top-nav {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .top-nav a {
+                width: 100%;
+            }
+
+            .hero {
+                padding: 24px 18px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-shell {
+                padding: 0 12px;
+            }
         }
     </style>
 </head>
+
 <body>
     <header class="page-shell">
         <div>
             <a class="brand-title" href="/">Rafael de Souza Costa</a>
-            <p class="brand-subtitle">Política de privacidade dedicada ao aplicativo corporativo Auto Center Santo Expedito.</p>
+            <p class="brand-subtitle">Política de privacidade dedicada ao aplicativo corporativo Auto Center Santo
+                Expedito.</p>
         </div>
         <nav class="top-nav" aria-label="Navegação de privacidade">
             <a href="/">Home</a>
@@ -208,30 +285,37 @@
     <main class="page-shell">
         <section class="hero">
             <h1>Política de Privacidade</h1>
-            <p>Aplicativo voltado à gestão interna de estoque e controle operacional, desenvolvido para uso exclusivo por colaboradores credenciados da Auto Center Santo Expedito.</p>
+            <p>Aplicativo voltado à gestão interna de estoque e controle operacional, desenvolvido para uso exclusivo
+                por colaboradores credenciados da Auto Center Santo Expedito.</p>
         </section>
 
         <div class="page-main">
             <div class="content-body">
                 <article>
                     <h2>Uso restrito e corporativo</h2>
-                    <p>O Auto Center Santo Expedito é uma ferramenta privada de uso interno. O acesso é limitado a funcionários autorizados e treinados, com objetivo de administrar peças, ordens de serviço e fluxo de estoque da oficina.</p>
+                    <p>O Auto Center Santo Expedito é uma ferramenta privada de uso interno. O acesso é limitado a
+                        funcionários autorizados e treinados, com objetivo de administrar peças, ordens de serviço e
+                        fluxo de estoque da oficina.</p>
                 </article>
 
                 <article>
                     <h2>Dados operacionais tratados</h2>
-                    <p>O aplicativo processa apenas informações necessárias ao controle logístico, como lançamentos de entrada e saída de produtos, identificação de operadores e dados descritivos de peças.</p>
-                    <p>Não há coleta, armazenamento ou rastreamento de dados pessoais de clientes ou terceiros. O foco está na operação técnica do inventário.</p>
+                    <p>O aplicativo processa apenas informações necessárias ao controle logístico, como lançamentos de
+                        entrada e saída de produtos, identificação de operadores e dados descritivos de peças.</p>
+                    <p>Não há coleta, armazenamento ou rastreamento de dados pessoais de clientes ou terceiros. O foco
+                        está na operação técnica do inventário.</p>
                 </article>
 
                 <article>
                     <h2>Armazenamento de credenciais</h2>
-                    <p>Dados de autenticação usados pelos colaboradores são protegidos segundo padrões básicos de segurança do Android. Cada funcionário é responsável por manter suas credenciais em sigilo.</p>
+                    <p>Dados de autenticação usados pelos colaboradores são protegidos segundo padrões básicos de
+                        segurança do Android. Cada funcionário é responsável por manter suas credenciais em sigilo.</p>
                 </article>
 
                 <article>
                     <h2>Segurança e não compartilhamento</h2>
-                    <p>Informações logísticas e operacionais não são vendidas, compartilhadas com redes de publicidade ou transmitidas a serviços externos. Os dados permanecem no ambiente de uso da empresa.</p>
+                    <p>Informações logísticas e operacionais não são vendidas, compartilhadas com redes de publicidade
+                        ou transmitidas a serviços externos. Os dados permanecem no ambiente de uso da empresa.</p>
                 </article>
 
                 <article>
@@ -248,13 +332,15 @@
                 <div class="card">
                     <h3>Contato</h3>
                     <p><strong>Desenvolvedor:</strong> Rafael de Souza Costa</p>
-                    <p><strong>E-mail:</strong> <a href="mailto:rafaeldesouzacosta.dev@gmail.com">rafaeldesouzacosta.dev@gmail.com</a></p>
+                    <p><strong>E-mail:</strong> <a
+                            href="mailto:rafaeldesouzacosta.dev@gmail.com">rafaeldesouzacosta.dev@gmail.com</a></p>
                     <p><strong>WhatsApp:</strong> +55 64 99266-1371</p>
                 </div>
 
                 <div class="highlight-card">
                     <h3>Informação importante</h3>
-                    <p>Este documento descreve o tratamento de dados do aplicativo Auto Center Santo Expedito e esclarece que o uso é exclusivo para operação interna da oficina.</p>
+                    <p>Este documento descreve o tratamento de dados do aplicativo Auto Center Santo Expedito e
+                        esclarece que o uso é exclusivo para operação interna da oficina.</p>
                 </div>
             </aside>
         </div>
@@ -269,4 +355,5 @@
         <p>&copy; 2026 Rafael de Souza Costa. Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>
