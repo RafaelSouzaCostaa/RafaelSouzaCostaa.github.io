@@ -61,7 +61,7 @@
         .card {
             background-color: var(--card-bg);
             padding: 25px;
-            border-radius: 8px;
+            border-radius: 12px;
             border: 1px solid #334155;
             transition: transform 0.2s;
             display: flex;
@@ -70,28 +70,39 @@
         .card:hover {
             transform: translateY(-5px);
         }
+        /* Alinhamento do cabeçalho do card */
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
         .card h3 {
             color: var(--accent-color);
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            line-height: 1.3;
         }
-        /* Nova classe profissional para ajustar o tamanho da foto miniatura */
+        /* Ajuste do ícone quadrado estilo Google Play */
         .card-img {
-            width: 100%;
-            height: 160px;
+            width: 96px;
+            height: 96px;
+            aspect-ratio: 1 / 1;
             object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 15px;
+            border-radius: 18px; /* Cantos arredondados padrão Play Store */
             background-color: #0f172a;
+            flex-shrink: 0;
         }
         .card p {
             flex-grow: 1;
+            font-size: 0.95rem;
+            color: #e2e8f0;
         }
         .btn {
             display: inline-block;
             background-color: var(--accent-color);
             color: #0f172a;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
             margin-top: 15px;
@@ -133,36 +144,40 @@
                 
                 <!-- Card do Aplicativo 1 -->
                 <div class="card">
-                    <!-- Cole a URL da foto dentro das aspas do src abaixo -->
-                    <img src="https://play-lh.googleusercontent.com/N0YZs8lWzzauVCKCtFbh8aCWRiurC3Y5KT-azzESPQl_qPpVVwueYdDSylKEv3pjghNh7tud7PQLPP2DbYQV6RE=w240-h480-rw" alt="Auto Center Santo Expedito" class="card-img">
-                    <h3>Auto Center Santo Expedito</h3>
+                    <div class="card-header">
+                        <img src="https://play-lh.googleusercontent.com/N0YZs8lWzzauVCKCtFbh8aCWRiurC3Y5KT-azzESPQl_qPpVVwueYdDSylKEv3pjghNh7tud7PQLPP2DbYQV6RE=w240-h480-rw" alt="Auto Center Santo Expedito" class="card-img">
+                        <h3>Auto Center Santo Expedito</h3>
+                    </div>
                     <p>Aplicação privada, voltada a funcionários da Auto Center Santo Expedito, os mesmos tem treinamento para usar o app.</p>
                     <a href="https://play.google.com/store/apps/details?id=estoque_santo_expedito.developer.rafael.projeto_estoque_santo_expedito" class="btn" target="_blank">Ver na Google Play</a>
                 </div>
 
                 <!-- Card do Aplicativo 2 -->
                 <div class="card">
-                    <!-- Cole a URL da foto dentro das aspas do src abaixo -->
-                    <img src="https://play-lh.googleusercontent.com/njUcdI7kwjn27x-v13sIiv9vmwHEVj-DlAWdvz8mj4LjKe-xv8cd9ealrjnIwRLZGU7aNmgr8Z3Hgqsbo8mPb8I=w240-h480-rw" alt="Foto Registro" class="card-img">
-                    <h3>Foto Registro</h3>
+                    <div class="card-header">
+                        <img src="https://play-lh.googleusercontent.com/njUcdI7kwjn27x-v13sIiv9vmwHEVj-DlAWdvz8mj4LjKe-xv8cd9ealrjnIwRLZGU7aNmgr8Z3Hgqsbo8mPb8I=w240-h480-rw" alt="Foto Registro" class="card-img">
+                        <h3>Foto Registro</h3>
+                    </div>
                     <p>Transforme suas fotos em documentos profissionais com o Foto Registo. O Foto Registo é a ferramenta ideal para profissionais que precisam documentar trabalhos, vistorias, inspeções...</p>
                     <a href="https://play.google.com/store/apps/details?id=foto_registro.developer.rafael_souza_costa" class="btn" target="_blank">Ver na Google Play</a>
                 </div>
 
                 <!-- Card do Aplicativo 3 -->
                 <div class="card">
-                    <!-- Cole a URL da foto dentro das aspas do src abaixo -->
-                    <img src="https://play-lh.googleusercontent.com/A6q9xXbGP4lr8JoMVPJR-uCW9JAgzJL90Q5vEJjgIWO2IXCmHQpY-tx8Hmcap34vmCc=w240-h480-rw" alt="Saúde do Interior" class="card-img">
-                    <h3>Saúde do Interior</h3>
+                    <div class="card-header">
+                        <img src="https://play-lh.googleusercontent.com/A6q9xXbGP4lr8JoMVPJR-uCW9JAgzJL90Q5vEJjgIWO2IXCmHQpY-tx8Hmcap34vmCc=w240-h480-rw" alt="Saúde do Interior" class="card-img">
+                        <h3>Saúde do Interior</h3>
+                    </div>
                     <p>App desenvolvido para fins de TCC</p>
                     <a href="https://play.google.com/store/apps/details?id=saudedointerior.developer.rafaelsouza.projeto_saude_do_interior" class="btn" target="_blank">Ver na Google Play</a>
                 </div>
 
                 <!-- Card do Aplicativo 4 -->
                 <div class="card">
-                    <!-- Cole a URL da foto dentro das aspas do src abaixo -->
-                    <img src="https://play-lh.googleusercontent.com/i5B019W0HW7Fq0q1qCu8jLJuroGiN9k-DGKW8UCPytgf1vpzONQICiaBl__H_M9Iiw=w240-h480-rw" alt="Radio Music" class="card-img">
-                    <h3>Radio Music</h3>
+                    <div class="card-header">
+                        <img src="https://play-lh.googleusercontent.com/i5B019W0HW7Fq0q1qCu8jLJuroGiN9k-DGKW8UCPytgf1vpzONQICiaBl__H_M9Iiw=w240-h480-rw" alt="Radio Music" class="card-img">
+                        <h3>Radio Music</h3>
+                    </div>
                     <p>Bem-vindo ao nosso aplicativo Rádio Music! Estamos entusiasmados em oferecer uma ampla variedade de musicas.</p>
                     <a href="https://play.google.com/store/apps/details?id=webradio.developer.rafaelsouza.projeto_web_radio" class="btn" target="_blank">Ver na Google Play</a>
                 </div>
