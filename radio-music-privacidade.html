@@ -1,16 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - Rádio Music</title>
+    <title>Política de Privacidade - Radio Music</title>
     <style>
         :root {
             --bg-color: #0f172a;
-            --card-bg: #1e293b;
+            --surface: #172134;
+            --surface-strong: #1e293b;
             --text-color: #f8fafc;
             --accent-color: #38bdf8;
             --muted-text: #94a3b8;
+            --border-color: #334155;
+            --shadow-color: rgba(0, 0, 0, 0.18);
         }
         * {
             box-sizing: border-box;
@@ -18,116 +21,243 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.6;
-            padding: 40px 20px;
+            min-height: 100vh;
+            line-height: 1.75;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #334155;
-        }
-        h1 {
-            font-size: 2rem;
-            color: var(--accent-color);
-            margin-bottom: 20px;
-            border-bottom: 2px solid #334155;
-            padding-bottom: 10px;
-        }
-        h2 {
-            font-size: 1.4rem;
-            color: var(--accent-color);
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        p {
-            margin-bottom: 15px;
-            color: #e2e8f0;
-            text-align: justify;
-        }
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-            color: #e2e8f0;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        .contact-box {
-            background-color: #0f172a;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
-            margin-bottom: 30px;
-        }
-        .contact-box p {
-            margin-bottom: 5px;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
+        a {
             color: var(--accent-color);
             text-decoration: none;
-            font-weight: bold;
         }
-        .back-link:hover {
-            text-decoration: underline;
+        a:hover,
+        .btn:hover {
+            opacity: 0.92;
+        }
+        .page-shell {
+            width: min(1180px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 32px 0 12px;
+        }
+        .brand-title {
+            font-size: 2rem;
+            color: var(--accent-color);
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .brand-subtitle {
+            color: var(--muted-text);
+            max-width: 620px;
+            font-size: 0.98rem;
+        }
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+        .top-nav a {
+            padding: 10px 16px;
+            border-radius: 999px;
+            background-color: rgba(56, 189, 248, 0.12);
+            border: 1px solid transparent;
+            font-size: 0.94rem;
+            font-weight: 600;
+        }
+        .hero {
+            background-color: var(--surface);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 38px 34px;
+            box-shadow: 0 24px 50px var(--shadow-color);
+            margin-bottom: 42px;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            line-height: 1.05;
+            margin-bottom: 16px;
+        }
+        .hero p {
+            color: #dbeafe;
+            font-size: 1.05rem;
+            max-width: 760px;
+        }
+        .page-main {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 32px;
+        }
+        .content-body {
+            display: grid;
+            gap: 28px;
+        }
+        .content-body h2 {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+        }
+        .content-body p,
+        .content-body li {
+            color: #dbeafe;
+        }
+        .content-body ul {
+            padding-left: 20px;
+            list-style: disc;
+            margin-top: 12px;
+        }
+        .aside {
+            display: grid;
+            gap: 24px;
+        }
+        .card,
+        .highlight-card {
+            background-color: var(--surface-strong);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 18px 35px var(--shadow-color);
+        }
+        .highlight-card {
+            border-left: 4px solid var(--accent-color);
+        }
+        .card h3,
+        .highlight-card h3 {
+            margin-bottom: 14px;
+            color: var(--accent-color);
+            font-size: 1.13rem;
+        }
+        .card p,
+        .highlight-card p,
+        .content-body p {
+            margin-bottom: 12px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 999px;
+            padding: 12px 22px;
+            background-color: var(--accent-color);
+            color: #0f172a;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+        .btn-secondary:hover {
+            background-color: rgba(56, 189, 248, 0.12);
         }
         footer {
+            padding: 32px 0 48px;
             text-align: center;
-            margin-top: 40px;
             color: var(--muted-text);
-            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 20px;
+        }
+        @media (min-width: 940px) {
+            .page-main { grid-template-columns: 2fr 1fr; }
+        }
+        @media (max-width: 900px) {
+            .hero { padding: 28px 22px; }
+        }
+        @media (max-width: 640px) {
+            .top-nav { justify-content: center; }
+            .hero h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
+    <header class="page-shell">
+        <div>
+            <a class="brand-title" href="/">Rafael de Souza Costa</a>
+            <p class="brand-subtitle">Política de privacidade do aplicativo Radio Music, com foco em streaming, anúncios e proteção de dados.</p>
+        </div>
+        <nav class="top-nav" aria-label="Navegação de privacidade">
+            <a href="/">Home</a>
+            <a href="/auto-center-santo-expedito-privacidade.html">Auto Center</a>
+            <a href="/foto-registro-privacidade.html">Foto Registro</a>
+            <a href="/saude-do-interior-privacidade.html">Saúde do Interior</a>
+        </nav>
+    </header>
 
-    <div class="container">
-        <h1>Política de Privacidade</h1>
+    <main class="page-shell">
+        <section class="hero">
+            <h1>Política de Privacidade</h1>
+            <p>O Radio Music prioriza a experiência de áudio enquanto mantém transparência sobre publicidade e uso técnico de dados.</p>
+        </section>
 
-        <div class="contact-box">
-            <p><strong>Desenvolvedor Responsável:</strong> Rafael de Souza Costa</p>
-            <p><strong>E-mail de Contato:</strong> rafaeldesouzacosta.dev@gmail.com</p>
-            <p><strong>Telefone/WhatsApp:</strong> +55 64 992661371</p>
+        <div class="page-main">
+            <div class="content-body">
+                <article>
+                    <h2>Transmissão de áudio</h2>
+                    <p>O aplicativo utiliza conexão de internet para carregar estações, músicas e playlists em tempo real. O uso de dados é necessário apenas para a reprodução do conteúdo.</p>
+                </article>
+
+                <article>
+                    <h2>Coleta de informações mínimas</h2>
+                    <p>Não solicitamos cadastros ou documentos pessoais para usar o aplicativo. O volume de dados coletados é reduzido ao mínimo técnico necessário para o funcionamento da transmissão.</p>
+                </article>
+
+                <article>
+                    <h2>Publicidade via AdMob</h2>
+                    <p>O Radio Music utiliza Google AdMob para exibir anúncios. Esse serviço pode processar identificadores anônimos de publicidade para entregar anúncios pertinentes ao usuário.</p>
+                    <p>O AdMob não tem acesso ao nome do usuário ou a dados confidenciais do aparelho além dos identificadores de publicidade.</p>
+                </article>
+
+                <article>
+                    <h2>Privacidade infantil</h2>
+                    <p>O aplicativo não coleta intencionalmente dados de menores de 13 anos. Caso haja qualquer dúvida sobre o uso por crianças, entre em contato para suporte e revisão.</p>
+                </article>
+
+                <article>
+                    <h2>Finalidade do processamento</h2>
+                    <ul>
+                        <li>Manter a execução estável do streaming de áudio;</li>
+                        <li>Suportar a exibição adequada de anúncios;</li>
+                        <li>Atender às diretrizes de publicação do Google Play.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <aside class="aside">
+                <div class="card">
+                    <h3>Contato</h3>
+                    <p><strong>Desenvolvedor:</strong> Rafael de Souza Costa</p>
+                    <p><strong>E-mail:</strong> <a href="mailto:rafaeldesouzacosta.dev@gmail.com">rafaeldesouzacosta.dev@gmail.com</a></p>
+                    <p><strong>WhatsApp:</strong> +55 64 99266-1371</p>
+                </div>
+
+                <div class="highlight-card">
+                    <h3>Uso transparente</h3>
+                    <p>Esta política esclarece como os dados de anúncios e de rede são processados para que a experiência de áudio permaneça segura e controlada.</p>
+                </div>
+            </aside>
         </div>
 
-        <p>Respeitamos sua privacidade e estamos comprometidos em protegê-la por meio de nossa conformidade com esta política de privacidade (“Política”). Esta Política descreve os tipos de informações que podemos coletar de você ou que você pode fornecer (“Informações Pessoais”) no aplicativo móvel “Rádio Music” (“Aplicativo Móvel” ou “Serviço”), em qualquer um de seus produtos e serviços relacionados (coletivamente, “Serviços”), e nossas práticas para coletar, usar, manter, proteger e divulgar essas Informações Pessoais.</p>
+        <div class="actions" style="margin-top: 10px;">
+            <a class="btn btn-secondary" href="/">← Voltar ao Início</a>
+            <a class="btn" href="/app-ads.txt" target="_blank">App-Ads.txt</a>
+        </div>
+    </main>
 
-        <p>Esta Política é um acordo juridicamente vinculativo entre você (“Usuário”, “você” ou “seu”) e este desenvolvedor de aplicativo móvel (“Operador”, “nós”, “nos” ou “nosso”). Ao acessar e usar o Aplicativo Móvel e os Serviços, você reconhece que leu, entendeu e concorda em ficar vinculado aos termos desta Política. Se você não concordar com os termos deste contrato, você não deve aceitar este contrato e não deve utilizar o serviço de streaming.</p>
-
-        <h2>Transmissão de Áudio e Uso de Rede</h2>
-        <p>O aplicativo Rádio Music oferece uma ampla variedade de músicas via streaming. Para carregar o conteúdo de áudio, estações e listas de reprodução em tempo real, o aplicativo requer acesso técnico à <strong>conexão de internet</strong> (dados móveis ou Wi-Fi) do dispositivo do usuário.</p>
-        <p>O tráfego de rede gerado é estritamente limitado ao download e buffer dos arquivos digitais de áudio consumidos. Não rastreamos o histórico pessoal de arquivos reproduzidos fora do escopo técnico de funcionamento do próprio reprodutor multimídia.</p>
-
-        <h2>Levantamento de Informações</h2>
-        <p>Garantimos uma política rígida de não registro de dados cadastrais (no-log). Você pode utilizar a aplicação sem a necessidade de preencher formulários, efetuar cadastros ou fornecer documentos de identificação pessoal. O processamento técnico de dados operacionais (como o tipo de sistema operacional do aparelho ou relatórios de erros inesperados) serve exclusivamente para correção de problemas no player e otimização de áudio.</p>
-
-        <h2>Monetização e Publicidade (Google AdMob)</h2>
-        <p>Para manter a gratuidade na transmissão das músicas aos ouvintes, o serviço utiliza anúncios publicitários controlados pela plataforma do Google AdMob. O AdMob pode processar identificadores anônimos de publicidade móvel presentes no sistema Android para exibir mídias comerciais adequadas. Esses identificadores não dão acesso ao seu nome ou informações confidenciais e podem ser redefinidos pelo próprio usuário nas configurações de privacidade do aparelho.</p>
-
-        <h2>Privacidade das Crianças</h2>
-        <p>Nosso reprodutor de músicas não solicita nem rastreia intencionalmente dados pessoais de menores de 13 anos. Caso identifique que algum identificador técnico fora dos padrões de conformidade foi coletado involuntariamente, por favor entre em contato conosco pelos canais indicados para que possamos efetuar a imediata exclusão e revisão das configurações da conta.</p>
-
-        <h2>Finalidade do Processamento</h2>
-        <p>O processamento técnico automatizado no Rádio Music opera unicamente para assegurar:</p>
-        <ul>
-            <li>(i) A estabilidade técnica e continuidade do fluxo de streaming de áudio;</li>
-            <li>(ii) A correta exibição e conformidade dos anúncios publicitários integrados;</li>
-            <li>(iii) O atendimento a todas as diretrizes de desenvolvedores estipuladas pelo Google Play Console.</li>
-        </ul>
-
-        <a href="/" class="back-link">← Voltar ao Início</a>
-    </div>
-
-    <footer>
+    <footer class="page-shell">
         <p>&copy; 2026 Rafael de Souza Costa. Todos os direitos reservados.</p>
     </footer>
-
 </body>
 </html>
