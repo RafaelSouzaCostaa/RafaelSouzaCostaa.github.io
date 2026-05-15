@@ -50,26 +50,35 @@
             margin: 0 auto;
         }
 
+        main.page-shell {
+            padding-top: 10px;
+        }
+
+        section+section {
+            margin-top: 44px;
+        }
+
         header {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: flex-start;
             gap: 18px;
-            padding: 32px 0 12px;
+            padding: 40px 0 24px;
         }
 
         .brand-title {
             font-size: 2rem;
             color: var(--accent-color);
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .brand-subtitle {
             color: var(--muted-text);
             max-width: 620px;
             font-size: 0.98rem;
+            line-height: 1.8;
         }
 
         .top-nav {
@@ -92,15 +101,15 @@
             background-color: var(--surface);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 38px 34px;
+            padding: 44px 36px;
             box-shadow: 0 24px 50px var(--shadow-color);
-            margin-bottom: 42px;
+            margin-bottom: 48px;
         }
 
         .hero h1 {
             font-size: 2.8rem;
             line-height: 1.05;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .hero p {
@@ -112,18 +121,19 @@
         .section-title {
             font-size: 1.9rem;
             color: var(--accent-color);
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .section-subtitle {
             color: var(--muted-text);
-            margin-bottom: 28px;
+            margin-bottom: 32px;
             max-width: 760px;
+            line-height: 1.75;
         }
 
         .grid {
             display: grid;
-            gap: 24px;
+            gap: 28px;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
 
@@ -131,10 +141,10 @@
             background-color: var(--surface-strong);
             border: 1px solid var(--border-color);
             border-radius: 18px;
-            padding: 26px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
             box-shadow: 0 18px 35px var(--shadow-color);
         }
 
@@ -216,9 +226,9 @@
             background-color: var(--surface-strong);
             border: 1px solid var(--border-color);
             border-radius: 18px;
-            padding: 28px;
+            padding: 34px;
             display: grid;
-            gap: 18px;
+            gap: 22px;
         }
 
         .contact-card p {
@@ -226,11 +236,11 @@
         }
 
         footer {
-            padding: 32px 0 48px;
+            padding: 36px 0 56px;
             text-align: center;
             color: var(--muted-text);
             border-top: 1px solid var(--border-color);
-            margin-top: 20px;
+            margin-top: 36px;
         }
 
         footer a {
